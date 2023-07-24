@@ -20,19 +20,20 @@ use App\Http\Controllers\ContactController;
 }); */
 
 
-Route::get('/contacts', [ContactController::class, 'index']);
+// Route::get('/contacts', [ContactController::class, 'index']);
 
-// create route for store contact
-Route::post('/contacts', [ContactController::class, 'store']);
+// // create route for store contact
+// Route::post('/contacts', [ContactController::class, 'store']);
 
-// create route for update
-Route::put('/contacts/{contact}', [ContactController::class, 'update']);
+// // create route for update
+// Route::put('/contacts/{contact}', [ContactController::class, 'update']);
 
-// create route for delete
-Route::delete('/contacts/{contact}', [ContactController::class, 'destroy']);
+// // create route for delete
+// Route::delete('/contacts/{contact}', [ContactController::class, 'destroy']);
 
-// create router for show
-Route::get('/contacts/{contact}', [ContactController::class, 'show']);
+// // create router for show
+// Route::get('/contacts/{contact}', [ContactController::class, 'show']);
 
 
-
+// create an api resource route for contact
+Route::apiResource('/contacts', ContactController::class);
