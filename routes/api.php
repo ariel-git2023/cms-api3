@@ -34,6 +34,24 @@ use App\Http\Controllers\ContactController;
 // // create router for show
 // Route::get('/contacts/{contact}', [ContactController::class, 'show']);
 
+// create group route for contacts
+// Route::group(['prefix' => 'contacts'], function () {
+//     // create route for store contact
+//     Route::post('/', [ContactController::class, 'store']);
+
+//     // create route for update
+//     Route::put('/{contact}', [ContactController::class, 'update']);
+
+//     // create route for delete
+//     Route::delete('/{contact}', [ContactController::class, 'destroy']);
+
+//     // create router for show
+//     Route::get('/{contact}', [ContactController::class, 'show']);
+
+//     // create router for index
+//     Route::get('/', [ContactController::class, 'index']);
+// });
+
 
 // create an api resource route for contact
 Route::apiResource('/contacts', ContactController::class);
